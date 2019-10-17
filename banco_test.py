@@ -158,7 +158,7 @@ def test_cria_conta():
 
 def test_nao_cria_conta():
     try:
-        c = Cliente('nome', 'não é número', 'email@mail.com')
+        c = Cliente('nome', 99999999, 'email@mail.com')
         Conta([c], 1, -1)
     except ValueError:
         assert True

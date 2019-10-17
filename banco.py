@@ -2,7 +2,7 @@
 # AC05 ADS2D - Banco
 #
 # Alunos: tiago.souza@aluno.faculdadeimpacta.com.br
-#         aluno2.sobrenome@aluno.faculdadeimpacta.com.br
+#         julio.fernando@aluno.faculdadeimpacta.com.br
 
 from typing import Union, List, Dict
 
@@ -42,12 +42,14 @@ class Cliente():
         else:
             self._telefone = novo_telefone
 
-    def get_email(self) -> str:
+    @property
+    def email(self) -> str:
         """Acessor do atributo Email."""
-        self.set_email(self._email)
+        self.email(self._email)
         return self._email
 
-    def set_email(self, novo_email: str) -> None:
+    @email.setter
+    def email(self, novo_email: str) -> None:
         """
         Mutador do atributo Email, caso não receba um email válido
         gera um ValueError.
@@ -117,6 +119,7 @@ class Conta():
     DICA: Crie uma variável interna privada para guardar as
     operaões feitas na conta
     """
+   
     def __init__(self, clientes: List[Cliente], numero_conta: int,
                  saldo_inicial: Number):
         self._clientes = clientes
@@ -153,7 +156,6 @@ class Conta():
             raise ValueError("Valor excede o saldo disponível")
         else:
             self._saldo -= valor
-            self._extSaque = {"saque": valor}
             self._extrato.append(("saque", valor))
 
     def deposito(self, valor: Number):
@@ -161,7 +163,6 @@ class Conta():
         Método depósito da classe Conta, operação deve aparecer no extrato
         '''
         self._saldo += valor
-        self._extDeposito = {"deposito": valor}
         self._extrato.append(("deposito", valor))
 
     def extrato(self) -> List[Dict[str, Number]]:
@@ -169,3 +170,11 @@ class Conta():
         Retorna uma lista com as operações (Tuplas) executadas na Conta
         '''
         return self._extrato
+
+    @classmethod
+    def mensagem(cls):
+        return cls.mensagem
+
+    @classmethod
+    def set_mensagem(cls, nova_mensagem):
+        cls.mensagem = nova_mensagem
