@@ -7,6 +7,7 @@ before_install:
     - pip install -U pytest
     - pip install -U pytest-cov
     - pip install -r requirements.txt
+    - pip install -U freeze
 script:
     - pylint_runner
     - pytest --cov = com/tiago/test/banco_test.py
