@@ -42,14 +42,11 @@ class Cliente():
         else:
             self._telefone = novo_telefone
 
-    @property
-    def email(self) -> str:
+    def get_email(self) -> str:
         """Acessor do atributo Email."""
-        self.email(self._email)
         return self._email
 
-    @email.setter
-    def email(self, novo_email: str) -> None:
+    def set_email(self, novo_email: str) -> None:
         """
         Mutador do atributo Email, caso não receba um email válido
         gera um ValueError.

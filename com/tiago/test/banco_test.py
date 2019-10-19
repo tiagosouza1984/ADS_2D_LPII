@@ -1,4 +1,4 @@
-from banco import Cliente, Banco, Conta
+from com.tiago.banco import Cliente, Banco, Conta
 
 
 def test_cria_cliente():
