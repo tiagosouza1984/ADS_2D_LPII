@@ -6,7 +6,8 @@ before_install:
     - pip install -U pip
     - pip install -U pytest
     - pip install -U pytest-cov
+    - pip install -U pylint_runner
     - pip install -r requirements.txt
 script:
-    - pylint-runner
-    - pytest --cov = com/tiago/test/banco_test.py
+    - pylint_runner
+    - pytest --cov =com com/tiago/test/banco_test.py
