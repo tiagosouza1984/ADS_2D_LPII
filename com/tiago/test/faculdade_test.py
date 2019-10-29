@@ -1,4 +1,4 @@
-from faculdade import Disciplina, Pessoa, Aluno, Professor
+from com.tiago.faculdade import Disciplina, Pessoa, Aluno, Professor
 
 
 def test_disciplina():
