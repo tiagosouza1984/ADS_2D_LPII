@@ -1,0 +1,11 @@
+#DB_USER="salas\\1900629"
+#DB_PASS="17041984"
+DB_USER="sa"
+DB_PASS="Tiago@Souza1984"
+
+# Coloque aqui o endereço do Banco de Dados de Acordo com o seu local
+# 200.49.54.234 - para acessar de fora da Faculdade
+# sql.salas.aulas - para acessar de dentro da rede da Faculdade
+#DB_HOST="200.49.54.234" 
+DB_HOST ="localhost"
+
