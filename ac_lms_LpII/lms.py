@@ -18,7 +18,7 @@ user = os.environ.get("DB_USER")
 pwd = os.environ.get("DB_PASS")
 server = os.environ.get("DB_HOST")
 
-engine = create_engine(f"mssql+pymssql://{user}:{pwd}@{server}/fit_alunos")
+engine = create_engine(f"mssql+pymssql://{user}:{pwd}@{server}/LMS_Database")
 # engine = create_engine(f"mssql+pymssql://
 # sa:Tiago@Souza1984@localhost/LMS_Database")
 Base = declarative_base(bind=engine, metadata=MetaData(schema="lms"))
